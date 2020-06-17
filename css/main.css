@@ -48,6 +48,10 @@ body header a {
   }
 }
 
+main section.hide {
+  display: none;
+}
+
 main section#card {
   background: #FFF;
   padding: 20px;
@@ -95,6 +99,82 @@ main section#card ul li strong {
   display: inline-block;
   margin-left: 40px;
   margin-top: 10px;
+}
+
+main section#form-card {
+  background: #FFF;
+  padding: 20px;
+  margin: 1em auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+@media (min-width: 840px) {
+  main section#form-card {
+    grid-area: card;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 1em;
+  }
+}
+
+main section#form-card form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section#form-card form input {
+  padding: 15px;
+  margin: 0.6em;
+  font-family: inherit;
+}
+
+main section#form-card form span {
+  margin: 0 auto;
+}
+
+main section#form-card form input#submit {
+  color: #001333;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #b8febe;
+  display: block;
+  text-align: center;
+  padding: 15px;
+}
+
+@media (min-width: 840px) {
+  main section#form-card form input#submit {
+    display: inline-block;
+    padding: 15px 60px;
+    margin: 1em auto 0 auto;
+  }
+}
+
+main section#form-card form input#submit:hover {
+  background-color: #9cfda4;
+}
+
+main section#form-card form textarea {
+  padding: 15px;
+  margin: 1em;
+  font-family: inherit;
+  resize: none;
 }
 
 main section#primary {

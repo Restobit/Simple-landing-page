@@ -8,7 +8,10 @@ $colors: (
     primary:#005DFF,
     accent:#FFF6BB,
     primary-light:lighten(#005DFF,40%),
-    primary-dark:darken(#005DFF,40%)
+    primary-dark:darken(#005DFF,40%),
+    submit-light:lighten(#04e617,40%),
+    submit-light-hover:lighten(#04c914,40%),
+   
 );
 
 $padding:15px;
@@ -59,6 +62,10 @@ main{
         grid-template-areas: "primary card";
     }
 
+    section.hide{
+        display: none;
+    }
+
     section#card{
         background: #FFF;
         padding: 20px;
@@ -99,6 +106,78 @@ main{
                 }
             }
         }
+    }
+
+    section#form-card{
+        background: #FFF;
+        padding: 20px;
+        margin: 1em auto;
+        border-radius: $borders;
+        box-shadow: 0 10px 40px rgba(0,0,0,.2);
+        width: 80%;
+
+        @include desktop {
+            grid-area: card;
+            height: fit-content;
+            align-self: center;
+            margin: 1em;
+        }
+
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            
+            input{
+                padding: $padding;
+                margin: 0.6em;
+                font-family: inherit;
+               
+                
+            }
+            span{
+                margin: 0 auto;
+            }
+
+            input#submit{
+                color: color(primary-dark);
+                border: 0px;
+                cursor: pointer;
+                border-radius: $borders;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                background-color: color(submit-light);
+                display: block;
+                text-align: center;
+                padding: $padding;
+              
+
+                @include desktop {
+                    display: inline-block;
+                    padding: $padding $padding * 4;
+                    margin: 1em auto 0 auto;
+                }
+               
+                &:hover{
+                    background-color: color(submit-light-hover);
+                }
+               
+               
+    
+            }
+            
+            textarea{
+                padding: $padding;
+                margin: 1em;
+                font-family: inherit;
+                resize: none;
+                
+            }
+           
+        }
+
+       
     }
 
     section#primary{

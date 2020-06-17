@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -19,11 +21,11 @@
             <ul>
                 <li>
                     <span></span>
-                    <strong>How may I help you, bro?</strong>
+                    <strong>How may I help you?</strong>
                 </li>
                 <li>
                     <span></span>
-                    <strong>I don't know if I can be helped.</strong>
+                    <strong>We are able to help for you.</strong>
                 </li>
                 <li>
                     <span></span>
@@ -31,12 +33,23 @@
                 </li>
             </ul>
         </section>
+        <section id="form-card" class="hide">
+            <form>
+                <input type="text" name="firstname" id="firstname" placeholder="First Name" autocomplete="off" required>
+                <input type="text" name="lastname" id="lastname" placeholder="Last Name" autocomplete="off" required>
+                <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
+                <textarea name="help" id="help" cols="100" rows="5" placeholder="Let's talk about your problem" required></textarea>
+                <span></span>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </section>
         <section id="primary">
             <h1>Your personal Assistant</h1>
             <p>Get help with your daily life stuff.</p>
-            <a href="#">Get help already</a>
+            <a href="#" id="btn_get_help_already">Get help already</a>
         </section>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
